@@ -1,0 +1,24 @@
+{
+  "name": "testing_task",
+  "version": "0.0.1",
+  "authors": [
+    "Andrew Babkin <ab@izh.com>"
+  ],
+  "description": "This is a testing task: \"Реализовать backbone приложение, оперирующее сущностями Person, набор полей: FIO, Age, Phone, Email. Приложение должно отображать сущности в виде списка, создавать, редактировать и удалять. Реализация возможна с использованием backbone, или angular фреймворков. \"",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}

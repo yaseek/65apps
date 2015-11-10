@@ -1,0 +1,16 @@
+{
+  "name": "testing_task",
+  "version": "1.0.0",
+  "description": "Server side of the testing task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andrew Babkin <ab@izh.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "serve-static": "^1.10.0"
+  }
+}
