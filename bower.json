@@ -4,7 +4,7 @@
   "authors": [
     "Andrew Babkin <ab@izh.com>"
   ],
-  "description": "This is a testing task: \"Реализовать backbone приложение, оперирующее сущностями Person, набор полей: FIO, Age, Phone, Email. Приложение должно отображать сущности в виде списка, создавать, редактировать и удалять. Реализация возможна с использованием backbone, или angular фреймворков. \"",
+  "description": "This is a testing task",
   "main": "index.html",
   "moduleType": [
     "node"

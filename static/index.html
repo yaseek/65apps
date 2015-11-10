@@ -19,8 +19,83 @@
     <div class="container ng-hide" 
         ng-app="testApp" ng-controller="main" ng-show="ready">
         <h2>Управление персоналом</h2>
-        <div>
+
+        <h4 class="text-danger" ng-show="error">{{error}}</h4>
+        <h4 class="text-info" ng-show="success">{{success}}</h4>
+        
+        <div ng-hide="error">
+            <h4 >
+                <span class="col-sm-2">Список: </span>
+                <button type="button" class="btn btn-default btn-xs"
+                    ng-click="addPerson()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Добавить персону
+                </button>
+                <button type="button" class="btn btn-info btn-xs"
+                    ng-click="loadList()">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    Обновить список
+                </button>
+                <button type="button" class="btn btn-success btn-xs"
+                    ng-click="saveList()">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    Сохранить список
+                </button>
+            </h4>
+            <ul>
+                <li ng-repeat="(id, person) in persons" ng-hide="person.removed">
+                    <span class="col-sm-3">{{person.FIO || 'Новая персона'}}</span>
+                    <button type="button" class="btn btn-primary btn-xs"
+                        ng-click="edited = true"
+                        ng-hide="edited">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        Редактировать
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs"
+                        ng-click="person.removed = true">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Удалить
+                    </button>
+                    <div ng-show="edited">
+                        <h5>
+                            <span class="col-sm-3">Редактирование персоны</span>
+                            <button type="button" class="btn btn-warning btn-xs"
+                                ng-click="edited = false">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                Закрыть
+                            </button>
+                        </h5>
+                        <!--form class="form-horizontal"-->
+                            <div class="form-group">
+                                <label for="inputFIO-{{id}}" class="col-sm-2 control-label">ФИО</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputFIO-{{id}}" placeholder="Фамилия, Имя, Отчество" ng-model="person.FIO">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAge-{{id}}" class="col-sm-2 control-label">Возраст</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="inputAge-{{id}}" placeholder="Возраст" ng-model="person.Age">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone-{{id}}" class="col-sm-2 control-label">Телефон</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputPhone-{{id}}" placeholder="Телефон" ng-model="person.Phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail-{{id}}" class="col-sm-2 control-label">E-mail</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail-{{id}}" placeholder="E-mail" ng-model="person.Email">
+                                </div>
+                            </div>
+                        <!--/form-->
+                    </div>
+                </li>
+            </ul>
         </div>
+        <!--pre>{{persons | json}}</pre-->
     </div>
 </body>
 </html>
