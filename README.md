@@ -8,23 +8,29 @@
 
 Установка менеджера пакетов `bower` производится командой 
 
-`npm install -g bower`
+```shell
+npm install -g bower
+```
 
 1. Клонируем репозиторий
 
-    `git clone https://github.com/yaseek/65apps.git`
+```shell
+git clone https://github.com/yaseek/65apps.git
+```
 
-2. В папке пректа выполнить следующие команды
+2. В папке проекта выполнить следующие команды
 
-    `sudo npm install`
+```shell
+    sudo npm install
 
-    `bower install`
+    bower install
     
-    `cd bower_components/bootstrap`
+    cd bower_components/bootstrap
     
-    `sudo npm install`
+    sudo npm install
     
-    `grunt`
+    grunt
+```
 
 Этими действиями будет выполнена установка требуемого окружения сервера
 
@@ -33,7 +39,9 @@
 
 Запуск сервера выполняется командой
 
-    `npm start`
+```shell
+npm start
+```
 
 При этом приложение будет доступен на порту 8080 сервера:
 `http://localhost:8080`
